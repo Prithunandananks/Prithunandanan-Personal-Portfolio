@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #030712;
+    color: #a1a1aa; /* text-zinc-400 */
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Minimalist Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030712;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Custom premium class names for our unified design system */
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glow Radial Lights */
+.radial-glow-violet {
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
+}
+
+.radial-glow-blue {
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+}
+
+/* Consistent Glassmorphic Card Styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 40px -15px rgba(59, 130, 246, 0.03);
+  border-radius: 1rem; /* rounded-2xl matches 1rem in tailwind if using standardized spacing */
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 50px -10px rgba(139, 92, 246, 0.04);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float 4.5s ease-in-out infinite;
+}
+
+/* Soft mask fade effect for the portrait image to blend into the background */
+.mask-portrait {
+  mask-image: radial-gradient(circle at 50% 45%, black 35%, rgba(0, 0, 0, 0.4) 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, black 35%, rgba(0, 0, 0, 0.4) 65%, transparent 100%);
+}
