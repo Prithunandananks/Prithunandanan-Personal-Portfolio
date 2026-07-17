@@ -7,7 +7,7 @@ export const profile = {
   email: "prithunandananks@gmail.com",
   github: "https://github.com/Prithunandananks",
   linkedin: "https://linkedin.com/in/prithunandanan-k-s-1787243a9",
-  resumePath: "resumePath: "/public/assets/resume/PrithunandananKS_Resume.pdf",
+  resumePath: "/resume/PrithunandananKS_Resume.pdf",
   profileImage: "/assets/profile/portrait.jpg",
   availabilityStatus: "Open to Internships & Roles"
 };
